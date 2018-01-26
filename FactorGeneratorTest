@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+public class FactorGeneratorTest 
+{
+	
+	public static void main(String[] args) 
+	{
+		
+		//String numString;
+		
+		//int integerToFactorize;
+		
+		String numString = JOptionPane.showInputDialog("Enter and integer (cancel to quit)");
+		
+		int integerToFactorize = Integer.parseInt(numString);
+		
+		FactorGenerator generate = new FactorGenerator(integerToFactorize);
+		
+		System.out.println("The prime factorization of " + integerToFactorize + " is: ");
+		generate.nextFactor();
+		
+	}
+
+}
