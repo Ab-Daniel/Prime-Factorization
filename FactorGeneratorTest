@@ -1,0 +1,23 @@
+import javax.swing.JOptionPane;
+
+public class FactorGeneratorTest 
+{
+	public static void main(String[] args)
+	{
+		while (true)
+		{
+			String input = (JOptionPane.showInputDialog("Enter a integer (cancel to quit):"));
+			if (input == null || input.equals(""))
+				break;
+			else
+			{
+				number = Integer.parseInt(input);
+				FactorGenerator facGen = new FactorGenerator(number);
+				System.out.print("Prime Factorization of " + number + ": "); 
+				facGen.nextFactors();
+				System.out.println();
+			}
+		}
+	}
+	private static int number;
+}
